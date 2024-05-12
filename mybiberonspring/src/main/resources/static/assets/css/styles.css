@@ -1,0 +1,335 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #92dee8; /* Color de fondo rosa */
+    background-image: 
+    linear-gradient(45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.5)),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.5));
+    background-size: 100% auto;
+    background-position: center;
+}
+.logo {
+    border:2px;
+    border-radius: 50%;
+}
+.navbar {
+    background-color: rgba(233, 235, 220, 0.937);
+    margin: 0;
+    text-align: right;
+}
+
+.navbar-brand {
+    width: 70px;
+    height: auto;
+    margin-top: 5px;
+}
+
+.navbar-nav .nav-link {
+    background-color: rgba(46, 159, 150, 0.523);
+    font-size: 26px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.inicio{
+padding: 3%;
+}   
+
+.contenedor-imagen-promocion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Espacio entre las imágenes */
+}
+
+.img-promocion {
+    max-width: 500px; /* Tamaño máximo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Evita espacios adicionales */
+    border-radius: 50px;
+
+}
+
+.contenedor-imagen-consulta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Reducción del espacio entre las imágenes */
+}
+
+.img-cita .img-cita{
+    max-width: 500px; /* Tamaño máximo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Evita espacios adicionales */
+    border-radius: 50px;
+
+}
+
+
+.contenedor-imagen-desc{
+    width: 100%; /* Ajusta el ancho al 100% */
+    height: 50px; /* Altura automática para mantener la proporción */
+    display: block; /* Evita espacios adicionales */
+    margin-bottom: 50px;
+}
+
+.carousel-inner img{
+    border-radius: 25%;
+}
+
+.contenedor-imagen-personal img{
+    border-radius: 25%;
+ 
+}
+
+.carousel-inner {
+    background-color: rgba(233, 235, 220, 0.937);
+}
+
+.carousel-control-next-icon {
+    background-color: rgb(20, 251, 255);
+}
+
+.carousel-control-prev-icon{
+    background-color: rgb(20, 255, 243);
+}
+
+.contenedor-imagen-personal img{
+    width: 400px;
+    height: 500px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+
+h1 {
+    font-size: 43px;
+    font-weight: bold;
+    background-color:rgba(46, 159, 150, 0.523);
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(44, 206, 221, 0.937);
+    color: white;
+}
+h3 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    background-color:rgba(46, 159, 150, 0.523);
+
+}
+
+
+
+
+
+ol > li {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(233, 235, 220, 0.937);
+    color: rgb(94, 89, 89);
+}
+
+div,
+.section {
+    color: rgb(94, 89, 89);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.section3 {
+    padding-top: 80px;
+}
+
+.img-fixed-size {
+    width: 400px; /* Ancho fijo para las imágenes */
+    height: 500px; /* Altura automática para mantener la proporción */
+    margin-bottom: 20px; /* Espaciado entre las imágenes */
+    border-radius: 50px;
+}
+
+.description{
+    height: 150px;
+}
+
+
+.contenedor2,
+.contenedorContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+}
+
+.centrar-lista ol {
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: rgba(118, 230, 225, 0.937);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: rgba(101, 226, 224, 0.937);
+}
+
+
+.container-fluid {
+    background-color: rgb(242, 243, 229);
+}
+
+form {
+    width: 450px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    max-height: 400px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.carousel {
+    background-color: #f0f0f0;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+p,
+footer a {
+    color: rgb(94, 89, 89);
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.breadcrumb {
+    font-size: 24px;
+    text-align: center !important;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    padding-left: 20px;
+    background-color: rgba(44, 206, 221, 0.937);
+    font-weight: bold;
+}
+
+
+.breadcrumb a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
+.breadcrumb span {
+    color: rgb(255, 255, 255);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+
+
+.left-align {
+    text-align: left;
+  }
+ .form {
+    width: 50%; /* Ajusta este valor según desees */
+    margin: auto;
+}
+
+
+
+.containerFormulario {
+    width: 50%; /* Ajusta este valor según desees */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ajuste adicional para centrar los elementos */
+.containerFormulario .form-group {
+    width: 100%;
+    margin-bottom: 10px; /* Ajusta este valor según sea necesario */
+    font-size: 20px;
+    font-weight: bold;
+    background-color:rgba(46, 159, 150, 0.523);
+    color: black;
+}
+
+.formularioColicos
+{
+    width: 100%;
+    margin-bottom: 10px; /* Ajusta este valor según sea necesario */
+    font-size: 20px;
+    font-weight: bold;
+    background-color:rgba(46, 159, 150, 0.523);
+    color: black;
+}
+
+.form-objetivos 
+{
+    width: 100%;
+    margin-bottom: 10px; /* Ajusta este valor según sea necesario */
+    font-size: 20px;
+    font-weight: bold;
+    background-color:rgba(215, 242, 240, 0.523);
+    color: rgb(56, 55, 55);  
+}
+
+
+
+
