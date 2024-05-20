@@ -19,6 +19,20 @@ body {
     text-align: right;
 }
 
+#successModal .modal-header,
+#successModal .modal-body {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(89, 149, 0);
+}
+
+#errorModal .modal-header,
+#errorModal .modal-body {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(189, 0, 0);
+}
+
 .navbar-brand {
     width: 70px;
     height: auto;

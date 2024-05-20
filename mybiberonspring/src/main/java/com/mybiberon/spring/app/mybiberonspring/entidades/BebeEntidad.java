@@ -19,7 +19,7 @@ public class BebeEntidad {
     
     private String nombre_usuario;
     private String contrasena_usuario;
-    private String nombre_Bebe;
+    private String nombre_bebe;
     private LocalDate fecha_nacimiento_bebe;
     private String genero_bebe;
     private BigDecimal peso_inicial_bebe;
@@ -55,12 +55,12 @@ public class BebeEntidad {
         this.contrasena_usuario = contrasena_usuario;
     }
 
-    public String getNombre_Bebe() {
-        return nombre_Bebe;
+    public String getnombre_bebe() {
+        return nombre_bebe;
     }
 
-    public void setNombre_Bebe(String nombre_Bebe) {
-        this.nombre_Bebe = nombre_Bebe;
+    public void setnombre_bebe(String nombre_bebe) {
+        this.nombre_bebe = nombre_bebe;
     }
 
     public LocalDate getFecha_nacimiento_bebe() {

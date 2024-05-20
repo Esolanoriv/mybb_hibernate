@@ -1,12 +1,12 @@
 // BebesServicioInterface.java
 package com.mybiberon.spring.app.mybiberonspring.interfaces;
-import java.util.List;
 
-import com.mybiberon.spring.app.mybiberonspring.entidades.BebeEntidad;
-import com.mybiberon.spring.app.mybiberonspring.modelos.BebeModelo;
+import org.springframework.http.ResponseEntity;
+import com.mybiberon.spring.app.mybiberonspring.modelos.BebeDto;
 
 public interface BebesServicioInterface {
 
-    List<BebeEntidad> obtenerTodosLosBebes();
-    boolean existeBebe(BebeModelo bebeModelo);
+    public boolean comprobarUsuarios(BebeDto bebeModelo);
+    public boolean existeBebe(BebeDto bebeModelo);
+    public ResponseEntity<?> nuevoBebe(BebeDto bebeModelo);
 }

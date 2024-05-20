@@ -1,173 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-  crossorigin="anonymous"></script>
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <title>My-Biberón</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Eva">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <!-- Estilos CSS o enlaces a archivos CSS -->
   <link rel="stylesheet" href="../assets/css/styles.css">
-  <!-- Incluir el JavaScript de Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Tg8fx5wqy7lV3Lq4BVR5Rh4Jefn34Vea6ry1Y0FM2Pquzbk4ADw4vo5y5tARjUbl" crossorigin="anonymous"></script>
-<link rel="icon" href="../assets/img/favicon.png" type="image/png">
-
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
 </head>
 
-
-
-
-<body>    
+<body>
+  <div id="mensajeAltaBebe" class="alert" role="alert" style="display: none;"></div>
   <div class="breadcrumb">
     <a href="inicio.html">Inicio...</a>
     <a href="informacionBiberon.html">Información biberón y formulas...</a>
     <a href="/registrosDeAlimentacion">Registros de alimentación...</a>
-    
-
   </div>
 
   <header>
-    <!---Contenedor1-->
     <div class="inicio">
-
-      <!--fila nueva-->
-
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        
-          <div class="container-fluid">
-            <!-- Logo a la izquierda -->
-            <a class="navbar-brand" href="#"><img src="../assets/img/logo 3.png" alt="Logo" style="max-width: 300px;"></a>
-        
-      
-          <!-- Botón de alternancia para dispositivos pequeños -->
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../assets/img/logo 3.png" alt="Logo" style="max-width: 300px;"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-      
-          <!-- Contenedor del menú -->
           <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
-              <!-- Elementos del menú -->
-              <li class="nav-item">
-                <a class="nav-link" href="inicio.html">Inicio</a>
-              </li>
-            
-              <li class="nav-item">
-                <a class="nav-link" href="informacionBiberon.html">Información biberón y formulas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/registrosDeAlimentacion">Registros de alimentación</a>
-              </li>
-      
-              <li class="nav-item">
-                <a class="nav-link" href="consultaYdudas.html">Consultas y dudas</a>
-              </li>
+              <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="informacionBiberon.html">Información biberón y formulas</a></li>
+              <li class="nav-item"><a class="nav-link" href="/registrosDeAlimentacion">Registros de alimentación</a></li>
+              <li class="nav-item"><a class="nav-link" href="consultaYdudas.html">Consultas y dudas</a></li>
             </ul>
           </div>
         </div>
       </nav>
-      
-      <div>
-        <h1>My-Biberón</h1>
-      </div>
-
+      <div><h1 id="altabebetitulo">My-Biberón</h1></div>
     </div>
-
-
   </header>
   <h2>Registrar nuevo Usuario</h2>
   <div class="containerFormulario">
-    <form onsubmit="return validarFormulario()">
+    <form id="newUserForm">
       <div class="form-group">
-          <label for="inputnombreUsuario" class="left-align">Nombre Usuario</label>
-          <input type="text" class="form-control" id="inputnombreUsuario" required>
+        <label for="inputnombreUsuario" class="left-align">Nombre Usuario</label>
+        <input type="text" class="form-control" id="inputnombreUsuario" required>
       </div>
       <div class="form-group">
-          <label for="inputcontrasenaUsuario" class="left-align">Contraseña</label>
-          <input type="password" class="form-control" id="inputcontrasenaUsuario" required>
+        <label for="inputcontrasenaUsuario" class="left-align">Contraseña</label>
+        <input type="password" class="form-control" id="inputcontrasenaUsuario" required>
       </div>
       <div class="form-group">
-          <label for="inputnombreBebe" class="left-align">Nombre del Bebé</label>
-          <input type="text" class="form-control" id="inputnombreBebe" required>
+        <label for="inputnombreBebe" class="left-align">Nombre del Bebé</label>
+        <input type="text" class="form-control" id="inputnombreBebe" required>
       </div>
       <div class="form-group">
-          <label for="inputfechaNacimientoBebe" class="left-align">Fecha de nacimiento del Bebé</label>
-          <input type="date" class="form-control" id="inputfechaNacimientoBebe" required>
+        <label for="inputfechaNacimientoBebe" class="left-align">Fecha de nacimiento del Bebé</label>
+        <input type="date" class="form-control" id="inputfechaNacimientoBebe" required>
       </div>
       <div class="form-group">
-          <label for="inputgeneroBebe" class="left-align">Sexo del Bebé</label>
-          <select id="inputgeneroBebe" class="form-control" required>
-              <option value="">Selecciona el sexo del bebé</option>
-              <option value="Niño">Niño</option>
-              <option value="Niña">Niña</option>
-          </select>
+        <label for="inputgeneroBebe" class="left-align">Sexo del Bebé</label>
+        <select id="inputgeneroBebe" class="form-control" required>
+          <option value="">Selecciona el sexo del bebé</option>
+          <option value="Niño">Niño</option>
+          <option value="Niña">Niña</option>
+        </select>
       </div>
       <div class="form-group">
-          <label for="inputpesoInicialBebe" class="left-align">Peso Inicial del Bebé</label>
-          <input type="number" class="form-control" id="inputpesoInicialBebe" required>
+        <label for="inputpesoInicialBebe" class="left-align">Peso Inicial del Bebé (gramos)</label>
+        <input type="number" class="form-control" id="inputpesoInicialBebe" required>
       </div>
       <div class="form-group">
-          <label for="inputalturaInicialBebe" class="left-align">Altura Inicial del Bebé</label>
-          <input type="number" class="form-control" id="inputalturaInicialBebe" required>
+        <label for="inputalturaInicialBebe" class="left-align">Altura Inicial del Bebé (centímetros)</label>
+        <input type="number" class="form-control" id="inputalturaInicialBebe" required>
       </div>
       <div class="form-group">
-          <label for="inputobservacionesBebe" class="left-align">Observaciones</label>
-          <input type="text" class="form-control" id="inputobservacionesBebe">
+        <label for="inputsemanagestacionBebe" class="left-align">Semana gestación del Bebé</label>
+        <input type="number" class="form-control" id="inputsemanagestacionBebe" required>
+      </div>
+      <div class="form-group">
+        <label for="inputobservacionesBebe" class="left-align">Observaciones</label>
+        <input type="text" class="form-control" id="inputobservacionesBebe">
       </div>
       <button type="submit" class="btn btn-primary">Registrar</button>
-      <a href="/registrosDeAlimentacion" class="btn btn-success">Volver</a>
-  </form>
-  
-  <script>
-      function validarFormulario() {
-          var nombreUsuario = document.getElementById('inputnombreUsuario').value.trim();
-          var contrasenaUsuario = document.getElementById('inputcontrasenaUsuario').value.trim();
-          var nombreBebe = document.getElementById('inputnombreBebe').value.trim();
-          var fechaNacimientoBebe = document.getElementById('inputfechaNacimientoBebe').value;
-          var generoBebe = document.getElementById('inputgeneroBebe').value;
-          var pesoInicialBebe = document.getElementById('inputpesoInicialBebe').value.trim();
-          var alturaInicialBebe = document.getElementById('inputalturaInicialBebe').value.trim();
-  
-          if (nombreUsuario === '' || contrasenaUsuario === '' || nombreBebe === '' || fechaNacimientoBebe === '' || generoBebe === '' || pesoInicialBebe === '' || alturaInicialBebe === '') {
-              alert('Por favor completa todos los campos obligatorios.');
-              return false;
-          }
-  
-          // Puedes agregar más validaciones aquí, como verificar el formato de la fecha de nacimiento,
-          // validar que el peso y la altura sean valores numéricos positivos, etc.
-  
-          return true; // Devuelve true para enviar el formulario si pasa todas las validaciones
-      }
-  </script>
-  
+      <a href="registrosDeAlimentacion.html" class="btn btn-success">Volver</a>
+    </form>
+
+
+ <!-- Modales -->
+<!-- Modal de error -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="errorModalLabel">¡Error en el registro!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="errorModalBody">
+        <!-- Este texto será actualizado dinámicamente -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
   </div>
-  
-  
+</div>
 
-    
-    
+<!-- Modal de éxito -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">¡Registro exitoso!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="successModalBody">
+        <!-- Este texto será actualizado dinámicamente -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-
-
-  
-  <!-- Pie de página -->
-  <footer>
-
-    <p> My-Biberón </p>
-    <a href="mailto:myBiberon@gmail.com">myBiberon@gmail.com</a>
-   
-      
-  </footer>
- 
-    
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="../servicios/altaBebe.js"></script>
 </body>
-
 </html>
