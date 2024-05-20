@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My-Biberón</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+  <div class="breadcrumb">
+    <a href="inicio.html">Inicio...</a>
+    <a href="informacionBiberon.html">Información biberón y formulas...</a>
+    <a href="/registrosDeAlimentacion">Registros de alimentación...</a>
+  </div>
+
+  <header>
+    <div class="inicio">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../assets/img/logo 3.png" alt="Logo" style="max-width: 300px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="inicio.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="informacionBiberon.html">Información biberón y formulas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/registrosDeAlimentacion">Registros de alimentación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="consultaYdudas.html">Consultas y dudas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <h1>My-Biberón</h1>
+      </div>
+    </div>
+  </header>
+
+  <h2>Registrar Objetivos</h2>
+  <div class="containerFormulario">
+    <form>
+      <div class="form-group">
+        <label for="inputfechaObjetivo" class="left-align">Fecha Objetivo</label>
+        <input type="date" class="form-control" id="inputfechaObjetivo">
+      </div>
+      <div class="form-group">
+        <label for="inputPesoActual" class="left-align">Peso actual</label>
+        <input type="number" class="form-control" id="inputPesoActual" onchange="calcularAumentoPeso()">
+      </div>
+      <div class="form-group">
+        <label for="inputAlturaActual" class="left-align">Altura actual</label>
+        <input type="number" class="form-control" id="inputAlturaActual">
+      </div>
+      <div class="form-objetivos">
+        <label for="inputAumentoPeso" class="left-align">Aumento de peso (gramos)</label>
+        <input type="number" class="form-control" id="inputAumentoPeso" readonly>
+      </div>
+      <div class="form-objetivos">
+        <label for="inputEstadoObjetivo" class="left-align">Estado del objetivo</label>
+        <input type="text" class="form-control" id="inputEstadoObjetivo" readonly>
+      </div>
+      <button type="submit" class="btn btn-primary">Registrar</button>
+      <a href="usuarioRegistrado.html" class="btn btn-success">Volver</a>
+    </form>
+  </div>
+
+  <footer>
+    <p>My-Biberón</p>
+    <a href="mailto:myBiberon@gmail.com">myBiberon@gmail.com</a>
+  </footer>
+
+  <script>
+    function calcularAumentoPeso() {
+      var pesoActual = parseFloat(document.getElementById('inputPesoActual').value);
+      var pesoAnterior = 0; // Define el peso anterior, puedes obtenerlo de la base de datos
+      var aumentoPeso = pesoActual - pesoAnterior;
+      document.getElementById('inputAumentoPeso').value = aumentoPeso;
+      
+      // Calcula el estado del objetivo
+      if (aumentoPeso > 200) {
+        document.getElementById('inputEstadoObjetivo').value = "Evolución favorable";
+      } else {
+        document.getElementById('inputEstadoObjetivo').value = "Consulta con el pediatra";
+      }
+    }
+  </script>
+</body>
+
+</html>

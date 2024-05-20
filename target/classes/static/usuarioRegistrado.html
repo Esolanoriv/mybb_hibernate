@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>My-Biberón</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Eva">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Estilos CSS o enlaces a archivos CSS -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <!-- Incluir el JavaScript de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Tg8fx5wqy7lV3Lq4BVR5Rh4Jefn34Vea6ry1Y0FM2Pquzbk4ADw4vo5y5tARjUbl" crossorigin="anonymous"></script>
+<link rel="icon" href="../assets/img/favicon.png" type="image/png">
+
+</head>
+
+
+
+
+<body>    
+  <div class="breadcrumb">
+    <a href="inicio.html">Inicio...</a>
+    <a href="informacionBiberon.html">Información biberón y formulas...</a>
+    <a href="registrosDeAlimentacion.html">Registros de alimentación...</a>
+    
+
+  </div>
+
+  <header>
+    <!---Contenedor1-->
+    <div class="inicio">
+
+      <!--fila nueva-->
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        
+          <div class="container-fluid">
+            <!-- Logo a la izquierda -->
+            <a class="navbar-brand" href="#"><img src="../assets/img/logo 3.png" alt="Logo" style="max-width: 300px;"></a>
+        
+      
+          <!-- Botón de alternancia para dispositivos pequeños -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Contenedor del menú -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <!-- Elementos del menú -->
+              <li class="nav-item">
+                <a class="nav-link" href="inicio.html">Inicio</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="informacionBiberon.html">Información biberón y formulas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="registrosDeAlimentacion.html">Registros de alimentación</a>
+              </li>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="consultaYdudas.html">Consultas y dudas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Mostrar el nombre de usuario -->
+      <h2>Bienvenido, <span id="nombreUsuario"></span>!</h2>
+          
+      <!-- Contenido de la página -->
+
+      <button id="cerrarSesionBtn" class="btn btn-danger">Cerrar Sesión</button>
+
+      <script>
+          // Obtener el nombre de usuario del localStorage
+          const nombreUsuario = localStorage.getItem("nombre_usuario");
+          if (nombreUsuario) {
+              // Mostrar el nombre de usuario en el elemento con id "nombreUsuario"
+              document.getElementById("nombreUsuario").textContent = nombreUsuario;
+          }
+  
+          // Agregar un controlador de eventos al botón de cerrar sesión
+          document.getElementById("cerrarSesionBtn").addEventListener("click", function() {
+              // Limpiar el localStorage al cerrar sesión
+              localStorage.removeItem("nombre_usuario");
+              // Redireccionar al usuario a la página de inicio de sesión
+              window.location.href = "/inicio.html"; // Cambia "index.html" por la página de inicio de sesión
+          });
+      </script>
+
+      <div>
+        <h1 th:text="${titulo}">My-Biberón</h1>
+        <h2 th:text="${usuario}"></h2>
+      </div>
+
+    </div>
+
+
+  </header>
+
+
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center"> 
+       
+        <a href="registroTomas.html" class="btn btn-primary btn-lg">Registrar tomas</a>
+        <a href="registroCacas.html" class="btn btn-primary btn-lg">Registrar cacas</a>
+        <a href="registroObjetivos.html" class="btn btn-primary btn-lg">Registrar Ojetivos</a>
+        <a href="evolucionEstadisticas.html" class="btn btn-primary btn-lg">Evolución del bebé</a>
+       
+      </div>
+   
+      
+
+
+    </div>
+
+
+  
+  <!-- Pie de página -->
+  <footer>
+
+    <p> My-Biberón </p>
+    <a href="mailto:myBiberon@gmail.com">myBiberon@gmail.com</a>
+   
+      
+  </footer>
+ 
+    
+</body>
+
+</html>
